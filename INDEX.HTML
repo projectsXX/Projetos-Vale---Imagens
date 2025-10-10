@@ -1,0 +1,227 @@
+
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma principal da página como português do Brasil -->
+<head>
+  <meta charset="utf-8"/> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>CMA - Complexo Mariana</title> <!-- Título da aba do navegador -->
+
+  <!-- Ícone da aba do navegador -->
+  <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.ba5b97868e2dc7fd80787f0c5df6eab8?rik=RyrUpzEhLEY8yw&pid=ImgRaw&r=0"/>
+
+  <!-- Fonte personalizada do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+
+  <!-- Link para o arquivo CSS externo -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Estilos adicionais incorporados -->
+  <style>
+    /* Estilo geral do corpo da página */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://cmaglobal.valeglobal.net/media/BG_Large-ZRXPQ525.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* Barra de navegação superior */
+    .navbar {
+      background-color: #00796b;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    /* Área esquerda da navbar */
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-left img {
+      height: 32px; /* Altura do logo */
+    }
+
+    .navbar-left .separator,
+    .navbar-left span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Área direita da navbar com botões de idioma */
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Estilo dos botões de idioma */
+    .lang-btn {
+      background-color: white;
+      color: #00796b;
+      border: 1px solid #00796b;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    /* Botão de idioma ativo */
+    .lang-btn.active {
+      background-color: #004d40;
+      color: white;
+    }
+
+    /* Container das caixas informativas */
+    .caixa-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px;
+      justify-content: center;
+    }
+
+    /* Caixa institucional */
+    .info-box {
+      background-color: #f5f7fa;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 24px;
+      width: 100%;
+      max-width: 500px;
+      border-left: 6px solid #00796b;
+      transition: transform 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .info-box:hover {
+      transform: translateY(-4px); /* Efeito ao passar o mouse */
+    }
+
+    /* Cabeçalho da caixa */
+    .info-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .info-title {
+      font-size: 18px;
+      color: #005b5e;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* Texto da caixa */
+    .info-text {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    /* Link clicável dentro da caixa */
+    a.sub-box {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background-color: #ffffff;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    a.sub-box:hover {
+      background-color: #e0e4e8;
+      transform: translateY(-3px);
+    }
+
+    a.sub-box img {
+      width: 24px;
+      height: 24px;
+    }
+
+    a.sub-box span {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegação superior -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <!-- Logo da Vale -->
+      <img alt="Vale Logo" src="https://cmaglobal.valeglobal.net/assets/images/Logo_Vale.svg"/>
+      <div class="separator">|</div>
+      <!-- Texto CMA com suporte a tradução -->
+      <span data-pt="CMA" data-en="CMA">CMA</span>
+    </div>
+    <div class="navbar-right">
+      <!-- Botões de idioma -->
+      <button class="lang-btn active" onclick="setLanguage('pt', this)" data-pt="PT" data-en="PT">PT</button>
+      <button class="lang-btn" onclick="setLanguage('en', this)" data-pt="EN" data-en="EN">EN</button>
+    </div>
+  </div>
+
+  <!-- Container das caixas informativas -->
+  <div class="caixa-container">
+    <!-- Primeira caixa -->
+    <div class="info-box">
+      <div class="info-header">
+        <h4 class="info-title" data-pt="DIR. ATLANTICO SUL" data-en="SOUTH ATLANTIC DIR.">DIR. ATLANTICO SUL</h4>
+      </div>
+      <div class="info-text">
+        <a href="4040.html" class="sub-box" data-pt="4040 - Níquel Ourilândia" data-en="4040 - Nickel Ourilândia">
+          <img src="https://cmaglobal.valeglobal.net/assets/images/Alert.png" alt="Alerta"/>
+          <span>4040 - Níquel Ourilândia</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Segunda caixa -->
+    <div class="info-box">
+      <div class="info-header">
+        <h4 class="info-title" data-pt="DIR. ATLANTICO SUL" data-en="SOUTH ATLANTIC DIR.">DIR. ATLANTICO SUL</h4>
+      </div>
+      <div class="info-text">
+        <a href="4040.html" class="sub-box" data-pt="4040 - Níquel Ourilândia" data-en="4040 - Nickel Ourilândia">
+          <img src="https://cmaglobal.valeglobal.net/assets/images/Alert.png" alt="Alerta"/>
+          <span>4040 - Níquel Ourilândia</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para alternar idioma -->
+  <script>
+    function setLanguage(lang, btn) {
+      // Atualiza botão ativo
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Atualiza textos com base nos atributos data-pt e data-en
+      document.querySelectorAll('[data-pt]').forEach(el => {
+        const span = el.querySelector('span');
+        if (span) {
+          span.textContent = el.getAttribute(`data-${lang}`);
+        } else {
+          el.textContent = el.getAttribute(`data-${lang}`);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
