@@ -1,0 +1,143 @@
+
+    /* Estilo geral do corpo da página */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://cmaglobal.valeglobal.net/media/BG_Large-ZRXPQ525.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* Barra de navegação superior */
+    .navbar {
+      background-color: #00796b;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    /* Área esquerda da navbar */
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-left img {
+      height: 32px; /* Altura do logo */
+    }
+
+    .navbar-left .separator,
+    .navbar-left span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Área direita da navbar com botões de idioma */
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Estilo dos botões de idioma */
+    .lang-btn {
+      background-color: white;
+      color: #00796b;
+      border: 1px solid #00796b;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    /* Botão de idioma ativo */
+    .lang-btn.active {
+      background-color: #004d40;
+      color: white;
+    }
+
+    /* Container das caixas informativas */
+    .caixa-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px;
+      justify-content: center;
+    }
+
+    /* Caixa institucional */
+    .info-box {
+      background-color: #f5f7fa;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 24px;
+      width: 100%;
+      max-width: 500px;
+      border-left: 6px solid #00796b;
+      transition: transform 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .info-box:hover {
+      transform: translateY(-4px); /* Efeito ao passar o mouse */
+    }
+
+    /* Cabeçalho da caixa */
+    .info-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .info-title {
+      font-size: 18px;
+      color: #005b5e;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* Texto da caixa */
+    .info-text {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    /* Link clicável dentro da caixa */
+    a.sub-box {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background-color: #ffffff;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    a.sub-box:hover {
+      background-color: #e0e4e8;
+      transform: translateY(-3px);
+    }
+
+    a.sub-box img {
+      width: 24px;
+      height: 24px;
+    }
+
+    a.sub-box span {
+      font-size: 14px;
+      color: #333;
+    }
+  
